@@ -37,7 +37,7 @@ server.use(
 
 
 
-server.listen(3001, "localhost", () => {
+server.listen(3001, "0.0.0.0", () => {
   console.log("Server started on http://localhost:3001");
   initialize_mongo_connectivity();
 });
