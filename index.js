@@ -10,7 +10,7 @@ const server = express();
 
 // CORS configuration
 const corsOptions = {
-  origin: "*", // Replace with allowed origins in production
+  origin: "wild-lens-tours-frontend.vercel.app", 
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true, // If you need to handle cookies
   optionsSuccessStatus: 204,
