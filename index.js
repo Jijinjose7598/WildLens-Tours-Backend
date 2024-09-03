@@ -10,7 +10,7 @@ const server = express();
 
 // CORS configuration
 const corsOptions = {
-  origin: process.env.ALLOWED_ORIGINS || "*", // Replace with allowed origins in production
+  origin: "*", // Replace with allowed origins in production
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true, // If you need to handle cookies
   optionsSuccessStatus: 204,
@@ -47,8 +47,8 @@ server.use((err, req, res, next) => {
 });
 
 // Start Server and Initialize MongoDB Connectivity
-server.listen(process.env.PORT || 3001, "0.0.0.0", async () => {
-  console.log(`Server started on http://localhost:${process.env.PORT || 3001}`);
+server.listen( 3001, "0.0.0.0", async () => {
+  console.log(`Server started on http://localhost:${ 3001}`);
 
   try {
     await initialize_mongo_connectivity();
